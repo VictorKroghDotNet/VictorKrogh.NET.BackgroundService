@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Title>VictorKrogh.NET.BackgroundService</Title>
+		<Description>.NET6 Shared Library - Useful for Background services</Description>
+		<RepositoryUrl>https://github.com/VictorKroghDotNet/VictorKrogh.NET.BackgroundService</RepositoryUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+		<PackageReference Include="VictorKrogh.NET.Disposable" Version="1.0.4" />
+	</ItemGroup>
+
+</Project>
