@@ -4,9 +4,9 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Title>VictorKrogh.NET.BackgroundService</Title>
+		<Title>VictorKrogh.NET.Hosting</Title>
 		<Description>.NET6 Shared Library - Useful for Background services</Description>
-		<RepositoryUrl>https://github.com/VictorKroghDotNet/VictorKrogh.NET.BackgroundService</RepositoryUrl>
+		<RepositoryUrl>https://github.com/VictorKroghDotNet/VictorKrogh.NET.Hosting</RepositoryUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
