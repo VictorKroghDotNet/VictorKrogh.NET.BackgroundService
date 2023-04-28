@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace VictorKrogh.NET.BackgroundServices;
+namespace VictorKrogh.NET.Hosting;
 
 public class HostedService<T> : BackgroundService
     where T : IBackgroundService
@@ -26,7 +26,7 @@ public class HostedService<T> : BackgroundService
         {
             Logger.LogWarning(ex, $"Hosted service for '{typeof(T).Name}' stopped execution of tasks.");
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             Logger.LogError(ex, $"Hosted service for '{typeof(T).Name}' failed during execution of tasks.");
             throw;

@@ -1,4 +1,4 @@
-﻿namespace VictorKrogh.NET.BackgroundServices;
+﻿namespace VictorKrogh.NET.Hosting;
 
 public interface IBackgroundService
 {

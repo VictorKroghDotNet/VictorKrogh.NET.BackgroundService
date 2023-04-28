@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using VictorKrogh.NET.Disposable;
 
-namespace VictorKrogh.NET.BackgroundServices;
+namespace VictorKrogh.NET.Hosting;
 
 public abstract class BackgroundServiceBase<TBackgroundService> : DisposableObject, IBackgroundService
     where TBackgroundService : IBackgroundService
@@ -17,7 +17,7 @@ public abstract class BackgroundServiceBase<TBackgroundService> : DisposableObje
     {
         Logger.LogInformation($"{typeof(TBackgroundService).Name} started executing.");
 
-        while(!cancellationToken.IsCancellationRequested)
+        while (!cancellationToken.IsCancellationRequested)
         {
             try
             {
