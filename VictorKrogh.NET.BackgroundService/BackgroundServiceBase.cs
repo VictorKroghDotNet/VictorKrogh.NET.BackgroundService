@@ -15,7 +15,7 @@ public abstract class BackgroundServiceBase<TBackgroundService> : DisposableObje
 
     public async Task ExecuteCoreAsync(CancellationToken cancellationToken)
     {
-        Logger.LogInformation($"{typeof(TBackgroundService)} started executing.");
+        Logger.LogInformation($"{typeof(TBackgroundService).Name} started executing.");
 
         while(!cancellationToken.IsCancellationRequested)
         {
@@ -25,13 +25,13 @@ public abstract class BackgroundServiceBase<TBackgroundService> : DisposableObje
             }
             catch (Exception ex)
             {
-                Logger.LogError(ex, $"{typeof(TBackgroundService)} failed to perform work");
+                Logger.LogError(ex, $"{typeof(TBackgroundService).Name} failed to perform work");
             }
 
             await DelayAsync(cancellationToken);
         }
 
-        Logger.LogInformation($"{typeof(TBackgroundService)} ended executing.");
+        Logger.LogInformation($"{typeof(TBackgroundService).Name} ended executing.");
     }
 
     protected abstract Task ExecuteAsync(CancellationToken cancellationToken);
